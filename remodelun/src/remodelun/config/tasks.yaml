@@ -1,17 +1,20 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Effectue une recherche approfondie et complète sur le sujet "{topic}", en incluant les publications les plus récentes, les discours des acteurs clés (ONU, gouvernements, ONG), ainsi que les données statistiques pertinentes.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    Une liste de 10 ressources web soigneusement sélectionnées avec : titre, lien, date et résumé critique en une ou deux phrases expliquant l'importance spécifique de chaque source dans le cadre du sujet "{topic}".
   agent: researcher
 
-reporting_task:
+cheat_sheet_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Rédige une fiche de synthèse extrêmement claire et structurée sur le sujet "{topic}" en format markdown, incluant une définition concise, le contexte historique, les principaux enjeux contemporains et les acteurs clés impliqués.
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Une cheat sheet complète en markdown organisée sous les titres : "Définition du sujet", "Historique rapide", "Enjeux principaux", "Acteurs clés et leurs rôles".
+  agent: researcher
+
+position_summary_task:
+  description: >
+    Prépare une fiche détaillée mais concise résumant précisément et fidèlement la position officielle du pays "{country}" sur le sujet "{topic}". Inclut des exemples récents de déclarations officielles, votes à l’ONU, et tout document de référence essentiel.
+  expected_output: >
+    Une fiche récapitulative en markdown structurée clairement sous les titres : "Position officielle générale", "Intérêts spécifiques du pays", "Actions et déclarations récentes", "Alliances et adversaires stratégiques".
+  agent: country_specialist
